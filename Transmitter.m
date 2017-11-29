@@ -2,7 +2,9 @@
 
 %Recive data input
 
-data = [1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,1,0,1,1,0,1,0,1,1,0,0];
+n = 3;
+
+data = round(rand(1,10*n));
 % s = fopen('datei.txt','r');
 % bitsequence = fread(s, 'ubit1')'
 % fclose(s);
@@ -11,9 +13,8 @@ data = [1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,1,0,1,1,0,1,0,1,1,0,0];
 %prefix =  [1,1,1,1,1,1,1,1];
 %postfix = [1,1,1,1,1,1,1,1];
 
-bits = data;
-send = fm4modulate(bits);
-receive = fm4demodulate(send);
+send = fm_2highn_modulate(data, n);
+receive = fm_2highn_demodulate(send, n);
 
 subplot(2,1,1)
 plot(receive,'ro')

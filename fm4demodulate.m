@@ -41,10 +41,4 @@ plot(z10,'ro')
 subplot(4,1,4)
 plot(z11,'ro')
 
-
-
-
-
-
-
 end
