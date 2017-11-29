@@ -6,7 +6,7 @@ n = 3;
 
 data = round(rand(1,10*n));
 % s = fopen('datei.txt','r');
-% bitsequence = fread(s, 'ubit1')'
+%  = fread(s, 'ubit1')'
 % fclose(s);
 
 % Modulate data
