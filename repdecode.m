@@ -10,7 +10,10 @@ function outputsequence = repdecode(bit_sequence, n)
 %
 % Returns:      outputsequence  ... ausgegebene Bitsequenz
 %
-outputsequence = round(sum(reshape(bit_sequence, n, length(bit_sequence)/n))/n);
 
+if (n ~= 1)
+    outputsequence = round(sum(reshape(bit_sequence, n, length(bit_sequence)/n))/n);
+else
+    outputsequence = round(reshape(bit_sequence, n, length(bit_sequence)/n)/n);
 end
 

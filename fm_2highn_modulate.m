@@ -1,10 +1,10 @@
 function z = fm_2highn_modulate(data, n)
 
 tau_bits = zeros(1,2^n);
-tauS = 80*n;
+tauS = 80*n
 
 for i = 1:2^n
-    tau_bits(i) = tauS/(4*i);
+    tau_bits(i) = tauS/(8*i);
 %     tauS = lcm(tauS, i);
 end
 
