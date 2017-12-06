@@ -4,6 +4,7 @@ tau_bits = zeros(1,2^n);
 tauS = 80*n;
 b = zeros(1,length(data)/tauS);
 phaseshift = 3*rand;
+
 d = 0:2^n-1;
 y = de2bi(d,'left-msb');
 

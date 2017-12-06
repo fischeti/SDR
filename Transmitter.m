@@ -12,7 +12,7 @@ fclose(s);
 
 data = [praeambel bitsequence endambel];
 % s = fopen('datei.txt','r');
-% bitsequence = fread(s, 'ubit1')'
+%  = fread(s, 'ubit1')'
 % fclose(s);
 
 % Modulate data
