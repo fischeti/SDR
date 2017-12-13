@@ -2,7 +2,7 @@ function b = fm_2highn_demodulate(data, n)
 
 tau_bits = zeros(1,2^n);
 tauS = 80*2^n/2;
-b = 0;
+b = zeros(1,length(data)/tauS);
 
 d = 0:2^n-1;
 y = de2bi(d,'left-msb');
