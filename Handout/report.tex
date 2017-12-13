@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{amssymb, amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{subcaption}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\title{FSK Implementation in Matlab}
+
+\begin{document}
+
+
+\maketitle
+\section*{Introduction}
+Unser Ziel bei unserem Projekt war es mithilfe von Matlab Bits FSK-moduliert zu übermitteln über ein Audiosignal. Dafür haben wir als Grundlage die Ideen aus dem P\& S Bits on Air verwendet.
+\section*{Implementation}
+Um Bits zu übermitteln durchläuft unser Programm folgende Funktionen:
+
+\textbf{Startkeys und Endkeys:} Um Anfang und Ende des Bitstreams zu erkennen wurden jeweils Start- und Endkeys angeh\"angt.
+
+\textbf{Modulation:} Wir haben eine FSK-Modulation benutzt (siehe Handout S. 8) mit $2^n$ Frequenzen, wobei $n$ wählbar ist. 
+\end{document}

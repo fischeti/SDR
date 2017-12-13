@@ -1,15 +1,15 @@
 function b = fm_2highn_demodulate(data, n)
 
 tau_bits = zeros(1,2^n);
-tauS = 80*n;
+tauS = 160*n;
 b = zeros(1,length(data)/tauS);
-phaseshift = 3*rand;
+phaseshift = 0;
 
 d = 0:2^n-1;
 y = de2bi(d,'left-msb');
 
 for i = 1:2^n
-    tau_bits(i) = tauS/(8*i);
+    tau_bits(i) = tauS/(16*i);
 end
 
 t = 0:length(data)-1;
@@ -25,11 +25,13 @@ for j = 1:length(tau_bits)
     r(j,:) = repdecode(z(j,:),n);
 end
 
-z = round(r/(tauS/2));
+% z = round(r/(tauS/2));
+
+r = r~=0;
 
 for j = 1:2^n
-    for i=1:length(z(1,:))
-        b(n*i-(n-1):n*i) = b(n*i-(n-1):n*i) + z(j,i)*y(j,:);
+    for i=1:length(r(1,:))
+        b(n*i-(n-1):n*i) = b(n*i-(n-1):n*i) + r(j,i)*y(j,:);
     end
 end
 % subplot(4,1,1)
