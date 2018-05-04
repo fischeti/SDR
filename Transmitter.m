@@ -2,7 +2,7 @@
 
 %Recive data input
 
-n = 2;
+n = 1;
 praeambel = round(rand(1,100));
 endambel = round(rand(1,100));
 

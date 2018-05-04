@@ -39,6 +39,6 @@ end
 z = sum(z);
 
 % 
-plot(t,z)
+% plot(t,z)
 
 end
